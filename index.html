@@ -139,6 +139,12 @@
                         Catch
                     </h6>
                 </div>
+                 <div class="col mx-1 my-1 equi" onclick="capturarslot4()">
+                    <img src="https://dl.dropbox.com/scl/fi/4c4rezwq99z1kih37tq38/image_search_1703006839064.png?rlkey=xo7lgkhpcximm8ak7yxjttm9q&" alt="pokeball gris transparente" width="100px" id="slot4">
+                    <h6 id="text4">
+                        Catch
+                    </h6>
+                 </div>
             </div>
         </div>
     <br>
@@ -156,9 +162,11 @@
         var slot1 = document.getElementById('slot1');
         var slot2 = document.getElementById('slot2');
         var slot3 = document.getElementById('slot3');
+        var slot4 = document.getElementById('slot4'); 
         var text1 = document.getElementById('text1');
         var text2 = document.getElementById('text2');
         var text3 = document.getElementById('text3');
+        var text4 = document.getElementById('text4');
         
         var random = Math.floor(Math.random() * 1017) + 1;
         var apiUrl = `https://pokeapi.co/api/v2/pokemon/${random}/`;
@@ -182,6 +190,10 @@
             slot1.src = img;
             text1.textContent = idpoke;
         }
+         function capturarslot4(){
+            slot4.src = img;
+            text4.textContent = idpoke;
+         }
         function capturarslot2(){
             slot2.src = img;
             text2.textContent = idpoke;
