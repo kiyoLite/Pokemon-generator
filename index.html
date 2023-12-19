@@ -71,7 +71,7 @@
 </head>
 <body>
    <main>
-    <p align="center" style="font-size: 8px;">V.1.2.</p>
+    <p align="center" style="font-size: 8px;">V.1.6.</p>
     <div class="container carta">
         <img src="https://dl.dropbox.com/scl/fi/1jctc87914lz2z941rj1x/image_search_1702960042787.png?rlkey=k9k6fin0f448e575cl4c6etyu&" alt="logo de pokemon transparente" class="ic" width="50px">
         <div class="row">
@@ -160,13 +160,13 @@
         var text2 = document.getElementById('text2');
         var text3 = document.getElementById('text3');
         
-        var random = Math.floor(Math.random() * 1008) + 1;
+        var random = Math.floor(Math.random() * 1017) + 1;
         var apiUrl = `https://pokeapi.co/api/v2/pokemon/${random}/`;
         var idpoke = 0;
         var img = 0;
         
         function generar(){
-        random = Math.floor(Math.random() * 1008) + 1;
+        random = Math.floor(Math.random() * 1017) + 1;
         apiUrl = `https://pokeapi.co/api/v2/pokemon/${random}/`;
         carga.style.display = "flex";
             fetch(apiUrl)
