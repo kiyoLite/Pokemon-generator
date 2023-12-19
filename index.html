@@ -66,6 +66,7 @@
 </head>
 <body>
    <main class="alin">
+    <p align="center" style="font-size: 8px;">V.1.2.</p>
     <div class="container carta">
         <img src="https://dl.dropbox.com/scl/fi/1jctc87914lz2z941rj1x/image_search_1702960042787.png?rlkey=k9k6fin0f448e575cl4c6etyu&" alt="logo de pokemon transparente" class="ic" width="50px">
         <div class="row">
@@ -101,9 +102,12 @@
                       </div>
                    </div>
                 </div>
-                <div class="centrar" onclick="generar()">
-                     <button type="button" class="btn btn-primary" aria-label="New pokemon">
+                <div class="centrar d-flex gap-3">
+                     <button type="button" onclick="generar()" class="btn btn-primary" aria-label="Generar nuevo Pokemon">
                          New pokemon
+                     </button>
+                     <button type="button" class="btn btn-secondary disabled" aria-label="Capturar pokemon">
+                         Capturar
                      </button>
                 </div>
            </div>
@@ -121,11 +125,11 @@
         var nombree = document.getElementById('namee');
         var peso = document.getElementById('peso');
         var altura = document.getElementById('altura');
-        var random = Math.floor(Math.random() * 898) + 1;
+        var random = Math.floor(Math.random() * 1008) + 1;
         var apiUrl = `https://pokeapi.co/api/v2/pokemon/${random}/`;
         
         function generar(){
-        random = Math.floor(Math.random() * 898) + 1;
+        random = Math.floor(Math.random() * 1008) + 1;
         apiUrl = `https://pokeapi.co/api/v2/pokemon/${random}/`;
         carga.style.display = "flex";
             fetch(apiUrl)
